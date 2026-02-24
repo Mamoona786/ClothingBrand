@@ -1,0 +1,128 @@
+/* Add this to the END of src/app/checkout/page.module.css */
+.wishlistContainer {
+  max-width: 75rem;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+
+/* Optional small helpers (safe to append) */
+
+
+
+.label { display:block; font-size: 0.95rem; margin: 0 0 6px; }
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+.input:focus { border-color: #bbb; }
+.primaryBtn, .secondaryBtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 10px 14px; border-radius: 10px; text-decoration: none; cursor: pointer;
+  border: 1px solid transparent; transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.primaryBtn { background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; }
+.primaryBtn:hover { background: var(--primary-dark); }
+.secondaryBtn { background: #f5f5f5; color: #333; }
+.secondaryBtn:hover { background: #eee; }
+.linkButton { background: transparent; border: 0; color: #06c; cursor: pointer; }
+.linkButton:hover { text-decoration: underline; }
+
+
+/* Align with Cart heading container */
+.wishlistContainer {
+  max-width: 75rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1rem;
+}
+
+/* --- Step Progress --- */
+.progressBar {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.progressList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  padding: 14px 0 6px;
+  margin: 0;
+}
+
+/* track behind dots */
+.progressTrack {
+  position: absolute;
+  top: 27px;                 /* roughly mid of dot height */
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #f1e2d5;       /* subtle line using your palette */
+  border: 1px solid rgba(179, 107, 67, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* filled portion */
+.progressFill {
+  height: 100%;
+  width: 33.33%;             /* Step 1 active */
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 999px;
+  transition: width .35s ease;
+}
+
+/* step item */
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  text-align: center;
+}
+
+.stepDot {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 2px solid var(--primary-dark);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: var(--primary-dark);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.stepLabel {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* active styles */
+.active .stepDot {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(132, 68, 33, 0.25);
+}
+.active .stepLabel {
+  color: var(--primary-dark);
+}
+
+/* small screens */
+@media (max-width: 520px) {
+  .stepLabel { font-size: 0.8rem; }
+  .stepDot { width: 30px; height: 30px; font-size: 0.9rem; }
+  .progressTrack { top: 24px; }
+}

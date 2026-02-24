@@ -1,0 +1,69 @@
+/* Pulled from wishlist/page.module.css so the component is self-contained */
+
+.wishlistHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(179, 107, 67, 0.15); /* divider */
+}
+
+.titleWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.wishlistTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.countChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 28px;
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: var(--accent-light);
+  border: 1px solid rgba(179, 107, 67, 0.15);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.headerActions {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.linkButton {
+  background: transparent;
+  color: var(--primary);
+  padding: 8px 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.linkButton:hover {
+  text-decoration: underline;
+  background: rgba(179, 107, 67, 0.05);
+}
+
+/* Responsive match to original */
+@media (max-width: 768px) {
+  .wishlistHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,94 @@
+/* src/app/payment/page.module.css */
+
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards / panels */
+.panel {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.aside {
+  position: sticky;
+  top: 16px;
+  height: fit-content;
+}
+
+/* Order summary list */
+.summaryList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summaryItem {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Text bits */
+.itemTitle {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemQty {
+  opacity: 0.8;
+}
+
+.amount {
+  text-align: right;
+}
+
+/* Totals */
+.rows {
+  margin-top: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discount {
+  color: #0a7;
+}
+
+.total {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+/* Button helper (optional; you already have checkoutCss.primaryBtn) */
+.payBtn {
+  width: 100%;
+  margin-top: 12px;
+}
